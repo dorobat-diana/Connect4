@@ -22,6 +22,7 @@ class ServiceBoard():
         :param repo: transfers the repository used
         """
         self.__repo = repo
+        self.last_move = (0,0)
 
     def add_move_yellow(self, column):
         """
@@ -39,6 +40,9 @@ class ServiceBoard():
         :return:
         """
         self.__repo.ADD_move_red(row, column)
+        self.last_move = (row, column)
+    def get_move(self):
+        return self.last_move
 
     def display_board(self, board: Board):
         """
