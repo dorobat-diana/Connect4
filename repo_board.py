@@ -28,7 +28,7 @@ class RepoBoard():
 
     def ADD_move_yellow(self, column):
         """
-        this is were the yellows move is added
+        this is where the yellows move is added
         :param column: the column introduced by the human player
         :return:
         """
@@ -39,7 +39,19 @@ class RepoBoard():
                     self.copy_board[int(row)][int(column)] = "Y"
                     obs = 1
                     break
-
+    def ADD_move_red_column(self, column):
+        """
+        this is where the reds move is added
+        :param column:
+        :return:
+        """
+        obs= 0
+        while obs == 0:
+            for row in range(0, 6):
+                if self.copy_board[int(row)][int(column)] == " ":
+                    self.copy_board[int(row)][int(column)] = "R"
+                    obs = 1
+                    break
     def ADD_move_red(self, row, column):
         """
         this is were the computers move is added

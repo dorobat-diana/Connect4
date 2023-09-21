@@ -41,6 +41,15 @@ class ServiceBoard():
         """
         self.__repo.ADD_move_red(row, column)
         self.last_move = (row, column)
+
+    def add_move_red_column(self, column):
+        """
+        adds the computers move
+        :param row:the row chosen
+        :param column: the column chosen
+        :return:
+        """
+        self.__repo.ADD_move_red_column(column)
     def get_move(self):
         return self.last_move
 
